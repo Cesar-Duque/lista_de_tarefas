@@ -1,0 +1,12 @@
+<div class="form-container">
+  <h2>Adicionar Tarefa</h2>
+  <form (submit)="addTask()">
+    <input [(ngModel)]="title" name="title" placeholder="Título" required />
+    <input
+      [(ngModel)]="description"
+      name="description"
+      placeholder="Descrição"
+    />
+    <button type="submit">Adicionar</button>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Lista de Tarefas</h1>
+  <app-task-form (taskAdded)="loadTasks()"></app-task-form>
+  <ul class="task-list">
+    <li *ngFor="let task of tasks" [class.completed]="task.completed">
+      <div *ngIf="!task.editing">
+        <input
+          type="checkbox"
+          [checked]="task.completed"
+          (change)="toggleComplete(task)"
+        />
+        <span>{{ task.title }} - {{ task.description }}</span>
+        <button (click)="deleteTask(task.id!)">Excluir</button>
+        <button (click)="editTask(task)">Editar</button>
+      </div>
+      <div *ngIf="task.editing">
+        <form (submit)="updateTask(task)">
+          <input [(ngModel)]="task.title" name="title" required />
+          <input [(ngModel)]="task.description" name="description" />
+          <button type="submit">Salvar</button>
+          <button type="button" (click)="cancelEdit(task)">Cancelar</button>
+        </form>
+      </div>
+    </li>
+  </ul>
+</div>
