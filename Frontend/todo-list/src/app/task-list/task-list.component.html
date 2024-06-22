@@ -1,6 +1,5 @@
 <div class="container">
   <h2>Lista de Tarefas</h2>
-  <app-task-form (taskAdded)="loadTasks()"></app-task-form>
   <ul class="task-list">
     <li *ngFor="let task of tasks" [class.completed]="task.completed">
       <div *ngIf="!task.editing">

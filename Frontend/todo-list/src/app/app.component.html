@@ -1,3 +1,11 @@
 <div class="container">
-  <app-task-list></app-task-list>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/add-task" routerLinkActive="active">Adicionar Tarefa</a>
+      </li>
+      <li><a routerLink="/tasks" routerLinkActive="active">Ver Tarefas</a></li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
