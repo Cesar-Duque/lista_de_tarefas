@@ -45,7 +45,6 @@ export class TaskListComponent implements OnInit {
   }
 
   updateTask(task: Task): void {
-    console.log('Updating task with data:', task); // Log task data being updated
     this.taskService.updateTask(task.id!, task).subscribe({
       next: () => {
         task.editing = false;

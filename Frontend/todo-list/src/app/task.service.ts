@@ -27,8 +27,6 @@ export class TaskService {
   }
 
   updateTask(id: number, task: Task): Observable<void> {
-    console.log('Sending update request for task ID:', id); // Log the task ID
-    console.log('Data being sent:', task); // Log the data being sent
     return this.http.put<void>(`${this.apiUrl}/${id}`, task);
   }
 
