@@ -64,6 +64,7 @@ O backend foi desenvolvido utilizando Node.js e Express. O Prisma foi utilizado 
 1. Instale as dependências:
     ```bash
     cd frontend
+    cd todo-list
     npm install
     ```
 
