@@ -41,7 +41,7 @@ export class TaskListComponent implements OnInit {
 
   cancelEdit(task: Task): void {
     task.editing = false;
-    this.loadTasks(); // Reload tasks to revert changes
+    this.loadTasks(); 
   }
 
   updateTask(task: Task): void {
